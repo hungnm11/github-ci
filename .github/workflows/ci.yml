@@ -22,8 +22,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
           heroku_email: "hung.nguyen@hotmail.com.vn"
-          justlogin: true
-      - run: heroku auth:whoami
 
       - name: yarn install
         run: |
