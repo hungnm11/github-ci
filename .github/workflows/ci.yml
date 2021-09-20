@@ -19,6 +19,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{ secrects.HEROKU_EMAIL }}
+          justlogin: true
+      - run: heroku auth:whoami
 
       - name: yarn install
         run: |
